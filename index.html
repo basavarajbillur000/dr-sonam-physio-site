@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Sonam's Physiotherapy Clinic | Baner, Pune</title>
+  <meta name="description" content="Premium physiotherapy care in Baner, Pune. 4.9★ rated clinic with 121+ reviews. Book via WhatsApp or call Dr. Sonam's Physiotherapy Clinic." />
+  <meta name="theme-color" content="#0d5c6b" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --teal: #0d5c6b;
+      --teal-2: #0f6f80;
+      --teal-3: #073d46;
+      --warm: #f9f7f4;
+      --gold: #d4a847;
+      --navy: #0d2433;
+      --text: #16323a;
+      --muted: #667b82;
+      --white: #ffffff;
+      --card: rgba(255,255,255,0.84);
+      --shadow: 0 18px 50px rgba(6, 49, 58, 0.15);
+      --radius: 22px;
+      --container: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #fffefc 0%, #f9f7f4 100%);
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+    .container { width: min(calc(100% - 32px), var(--container)); margin: 0 auto; }
+    .section { padding: 92px 0; position: relative; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 8px 14px; border-radius: 999px; font-size: 0.88rem; font-weight: 700;
+      background: rgba(13, 92, 107, 0.08); color: var(--teal);
+      letter-spacing: 0.02em;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      line-height: 1.05;
+      margin: 18px 0 14px;
+      color: var(--navy);
+    }
+    .section-subtitle {
+      color: var(--muted); max-width: 760px; line-height: 1.75; font-size: 1rem;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      transition: all 0.3s ease;
+      padding: 18px 0;
+    }
+    .navbar.scrolled {
+      padding: 10px 0;
+      background: rgba(255,255,255,0.68);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 8px 30px rgba(6, 49, 58, 0.08);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 14px; min-width: 0;
+    }
+    .brand-icon {
+      width: 48px; height: 48px; border-radius: 16px;
+      background: linear-gradient(135deg, var(--teal), var(--teal-2));
+      color: white; display: grid; place-items: center;
+      box-shadow: 0 10px 25px rgba(13, 92, 107, 0.25);
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+    .brand-text strong {
+      display: block; font-family: 'Playfair Display', serif; font-size: 1.05rem;
+      color: var(--navy);
+    }
+    .brand-text span { color: var(--muted); font-size: 0.87rem; }
+    .nav-links {
+      display: flex; align-items: center; gap: 28px;
+    }
+    .nav-links a {
+      color: var(--text); font-weight: 600; font-size: 0.95rem; position: relative;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; left: 0; bottom: -7px; width: 0; height: 2px;
+      background: var(--gold); transition: width 0.25s ease;
+    }
+    .nav-links a:hover::after { width: 100%; }
+    .btn {
+      border: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 14px 22px; border-radius: 999px; font-weight: 700; transition: all 0.25s ease;
+      box-shadow: 0 10px 24px rgba(13, 92, 107, 0.15);
+    }
+    .btn-primary { background: linear-gradient(135deg, var(--teal), var(--teal-2)); color: white; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(13,92,107,0.25); }
+    .btn-outline {
+      background: transparent; color: white; border: 1.5px solid rgba(255,255,255,0.72); box-shadow: none;
+    }
+    .btn-outline.dark {
+      color: var(--teal); border-color: rgba(13,92,107,0.25); background: rgba(255,255,255,0.9);
+    }
+    .btn-whatsapp { background: #25D366; color: white; }
+    .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(37,211,102,0.28); }
+    .menu-toggle {
+      display: none; width: 46px; height: 46px; border-radius: 14px; border: none;
+      background: rgba(13,92,107,0.1); color: var(--teal); font-size: 1.1rem; cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100svh;
+      display: flex; align-items: center;
+      position: relative;
+      background:
+        linear-gradient(120deg, rgba(6,34,41,0.86) 0%, rgba(13,92,107,0.58) 48%, rgba(10,48,57,0.82) 100%),
+        url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1920&auto=format&fit=crop&q=80') center/cover no-repeat;
+      color: white;
+      overflow: hidden;
+    }
+    .hero::before, .hero::after {
+      content: ''; position: absolute; border-radius: 50%; filter: blur(18px); opacity: 0.35;
+      background: radial-gradient(circle, rgba(212,168,71,0.45), transparent 70%);
+    }
+    .hero::before { width: 340px; height: 340px; right: -70px; top: 100px; }
+    .hero::after { width: 250px; height: 250px; left: -90px; bottom: 30px; }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.1fr 0.75fr; gap: 34px; align-items: center;
+      padding: 130px 0 74px;
+    }
+    .hero-copy { max-width: 700px; }
+    .hero .eyebrow {
+      background: rgba(255,255,255,0.12); color: #fff; backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.16);
+    }
+    .hero h1 {
+      margin: 18px 0 16px; font-family: 'Playfair Display', serif;
+      font-size: clamp(2.9rem, 7vw, 5.4rem); line-height: 0.95; letter-spacing: -0.02em;
+    }
+    .hero p {
+      max-width: 650px; color: rgba(255,255,255,0.9); font-size: 1.07rem; line-height: 1.8;
+    }
+    .hero-meta {
+      display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 32px;
+    }
+    .meta-pill {
+      padding: 10px 14px; border-radius: 999px; background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.12);
+      font-size: 0.92rem; font-weight: 600;
+    }
+    .motto {
+      display: inline-block; color: #f8d57b; font-style: italic; font-weight: 600;
+      margin-bottom: 14px; letter-spacing: 0.02em;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+    .hero-card {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 24px; border-radius: 28px; backdrop-filter: blur(14px);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+      justify-self: end; width: min(100%, 420px);
+      animation: floatY 5s ease-in-out infinite;
+    }
+    .hero-card h3 {
+      margin: 8px 0 14px; font-family: 'Playfair Display', serif; font-size: 1.7rem;
+    }
+    .hero-card ul { list-style: none; padding: 0; margin: 0 0 22px; }
+    .hero-card li {
+      display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; color: rgba(255,255,255,0.92);
+      line-height: 1.55;
+    }
+    .hero-card i { color: #f8d57b; margin-top: 4px; }
+    .rating-badge {
+      position: absolute; right: 24px; bottom: 24px; z-index: 2;
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 18px; border-radius: 999px; color: white; font-weight: 800;
+      background: rgba(255,255,255,0.12); backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.2);
+      animation: pulseGlow 2.8s ease-in-out infinite;
+    }
+    .fade-up {
+      opacity: 0; transform: translateY(22px); animation: fadeUp 0.8s ease forwards;
+    }
+    .delay-1 { animation-delay: 0.15s; }
+    .delay-2 { animation-delay: 0.3s; }
+    .delay-3 { animation-delay: 0.45s; }
+
+    /* Sticky CTA */
+    .sticky-cta {
+      position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%);
+      width: min(calc(100% - 20px), 760px); z-index: 999;
+      background: rgba(10,36,51,0.92); color: white; border-radius: 22px;
+      display: flex; align-items: center; justify-content: space-between; gap: 14px;
+      padding: 14px 16px; box-shadow: 0 18px 50px rgba(6,34,41,0.26); backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .sticky-cta-copy strong { display: block; font-size: 0.95rem; }
+    .sticky-cta-copy span { color: rgba(255,255,255,0.72); font-size: 0.85rem; }
+    .sticky-cta-actions { display: flex; gap: 10px; }
+
+    /* Stats */
+    .stats-wrap {
+      margin-top: -44px; position: relative; z-index: 4;
+    }
+    .stats-bar {
+      background: linear-gradient(135deg, var(--teal-3), var(--teal));
+      color: white; border-radius: 28px; padding: 24px; display: grid;
+      grid-template-columns: repeat(4, 1fr); gap: 18px; box-shadow: var(--shadow);
+    }
+    .stat {
+      padding: 18px; text-align: center; border-radius: 22px;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);
+    }
+    .stat-value {
+      font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; font-family: 'Playfair Display', serif;
+      margin-bottom: 6px;
+    }
+    .stat-label { color: rgba(255,255,255,0.8); font-size: 0.95rem; }
+
+    /* Cards & grids */
+    .services-grid, .trust-grid, .contact-grid, .about-grid {
+      display: grid; gap: 24px;
+    }
+    .services-grid { grid-template-columns: repeat(3, 1fr); margin-top: 38px; }
+    .service-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(255,255,255,0.86));
+      border: 1px solid rgba(13,92,107,0.08);
+      border-radius: 24px; padding: 28px; box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+      min-height: 240px; position: relative; overflow: hidden;
+    }
+    .service-card::before {
+      content: ''; position: absolute; inset: 0; background: linear-gradient(140deg, rgba(13,92,107,0.95), rgba(15,111,128,0.92));
+      opacity: 0; transition: opacity 0.3s ease;
+    }
+    .service-card > * { position: relative; z-index: 1; }
+    .service-card .icon {
+      width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center;
+      background: rgba(13,92,107,0.08); color: var(--teal); font-size: 1.45rem; margin-bottom: 18px;
+      transition: all 0.3s ease;
+    }
+    .service-card h3 { margin: 0 0 12px; font-size: 1.25rem; }
+    .service-card p { margin: 0; color: var(--muted); line-height: 1.7; }
+    .service-card:hover {
+      transform: translateY(-8px); box-shadow: 0 22px 48px rgba(10,36,51,0.2); color: white;
+    }
+    .service-card:hover::before { opacity: 1; }
+    .service-card:hover .icon { background: rgba(255,255,255,0.16); color: #fff; }
+    .service-card:hover p { color: rgba(255,255,255,0.84); }
+
+    /* Condition finder */
+    .condition-shell {
+      margin-top: 38px; background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(248,245,239,0.92));
+      border-radius: 30px; padding: 28px; box-shadow: var(--shadow); border: 1px solid rgba(13,92,107,0.08);
+    }
+    .condition-tabs {
+      display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;
+    }
+    .tab-btn {
+      border: none; background: rgba(13,92,107,0.08); color: var(--teal); cursor: pointer;
+      padding: 12px 18px; border-radius: 999px; font-weight: 700; transition: all 0.25s ease;
+    }
+    .tab-btn.active { background: var(--teal); color: white; }
+    .condition-panels { position: relative; min-height: 260px; }
+    .condition-panel {
+      display: none; grid-template-columns: 0.9fr 1.1fr; gap: 24px; align-items: stretch;
+      animation: fadeUp 0.35s ease;
+    }
+    .condition-panel.active { display: grid; }
+    .condition-visual {
+      background: linear-gradient(135deg, rgba(13,92,107,0.12), rgba(212,168,71,0.12));
+      border-radius: 24px; padding: 28px; display: flex; flex-direction: column; justify-content: center;
+      min-height: 260px;
+    }
+    .condition-visual i {
+      font-size: 2.4rem; color: var(--teal); margin-bottom: 18px;
+    }
+    .condition-visual h3 {
+      margin: 0 0 10px; font-family: 'Playfair Display', serif; font-size: 2rem;
+    }
+    .condition-visual p { margin: 0; color: var(--muted); line-height: 1.75; }
+    .condition-details {
+      background: white; border-radius: 24px; padding: 28px; border: 1px solid rgba(13,92,107,0.08);
+    }
+    .detail-block + .detail-block { margin-top: 18px; }
+    .detail-block h4 { margin: 0 0 8px; color: var(--navy); }
+    .detail-block p { margin: 0; color: var(--muted); line-height: 1.8; }
+
+    /* About */
+    .about-grid {
+      grid-template-columns: 0.95fr 1.05fr; align-items: center; margin-top: 34px;
+    }
+    .about-image {
+      position: relative; border-radius: 30px; overflow: hidden; box-shadow: var(--shadow);
+      min-height: 540px;
+      background:
+        linear-gradient(180deg, rgba(13,92,107,0.08), rgba(212,168,71,0.08)),
+        url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=1000&auto=format&fit=crop&q=80') center/cover no-repeat;
+    }
+    .about-image::after {
+      content: 'Care that listens. Recovery that lasts.';
+      position: absolute; left: 22px; bottom: 22px; right: 22px;
+      background: rgba(255,255,255,0.88); color: var(--navy); padding: 18px 20px;
+      border-radius: 20px; font-family: 'Playfair Display', serif; font-size: 1.35rem;
+      box-shadow: 0 16px 30px rgba(0,0,0,0.1);
+    }
+    .about-content p { color: var(--muted); line-height: 1.85; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
+    .info-pill {
+      padding: 12px 16px; border-radius: 999px; background: white; color: var(--teal);
+      border: 1px solid rgba(13,92,107,0.08); font-weight: 700; box-shadow: 0 8px 22px rgba(13,92,107,0.07);
+    }
+    .quote-box {
+      margin-top: 24px; padding: 24px; border-radius: 24px; background: linear-gradient(180deg, rgba(13,92,107,0.08), rgba(212,168,71,0.08));
+      border-left: 4px solid var(--gold);
+    }
+    .quote-box p { margin: 0 0 10px; color: var(--navy); font-weight: 500; }
+    .quote-box span { color: var(--muted); font-size: 0.95rem; }
+
+    /* Why choose */
+    .dark-section {
+      background: linear-gradient(180deg, #0d2433 0%, #102d3d 100%);
+      color: white;
+    }
+    .dark-section .section-title, .dark-section .section-subtitle { color: white; }
+    .dark-section .section-subtitle { color: rgba(255,255,255,0.75); }
+    .trust-grid { grid-template-columns: repeat(4, 1fr); margin-top: 38px; }
+    .trust-card {
+      background: rgba(255,255,255,0.06); border-radius: 24px; padding: 28px;
+      border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .trust-card:hover { transform: translateY(-8px); background: rgba(255,255,255,0.1); }
+    .trust-card .icon {
+      width: 60px; height: 60px; border-radius: 18px; display: grid; place-items: center;
+      background: rgba(212,168,71,0.14); color: #f8d57b; font-size: 1.3rem; margin-bottom: 18px;
+    }
+    .trust-card h3 { margin: 0 0 10px; font-size: 1.2rem; }
+    .trust-card p { margin: 0; color: rgba(255,255,255,0.75); line-height: 1.75; }
+    .badge-row {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 26px;
+    }
+    .mini-badge {
+      padding: 18px; background: rgba(255,255,255,0.06); border-radius: 18px; text-align: center;
+      color: rgba(255,255,255,0.86); border: 1px solid rgba(255,255,255,0.06);
+    }
+    .mini-badge i { display: block; color: #f8d57b; font-size: 1.2rem; margin-bottom: 10px; }
+
+    /* Testimonials */
+    .testimonial-shell {
+      margin-top: 36px; position: relative; overflow: hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(249,247,244,0.94));
+      border-radius: 30px; padding: 28px; box-shadow: var(--shadow);
+    }
+    .testimonial-track {
+      display: flex; transition: transform 0.45s ease;
+    }
+    .testimonial-slide {
+      min-width: 100%; padding: 8px;
+    }
+    .testimonial-card {
+      border-radius: 26px; background: white; padding: 30px; border: 1px solid rgba(13,92,107,0.08);
+      min-height: 290px; display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .stars { color: var(--gold); letter-spacing: 0.12em; margin-bottom: 16px; }
+    .testimonial-card h3 { margin: 0 0 14px; font-size: 1.35rem; color: var(--navy); }
+    .testimonial-card p { margin: 0; color: var(--muted); line-height: 1.85; font-size: 1rem; }
+    .testimonial-meta {
+      margin-top: 20px; display: flex; justify-content: space-between; gap: 16px; color: var(--teal);
+      font-weight: 700; font-size: 0.95rem; flex-wrap: wrap;
+    }
+    .testimonial-controls {
+      display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-top: 18px;
+    }
+    .arrow-group { display: flex; gap: 10px; }
+    .arrow-btn {
+      width: 46px; height: 46px; border-radius: 50%; border: none; cursor: pointer; background: rgba(13,92,107,0.08);
+      color: var(--teal); transition: all 0.25s ease;
+    }
+    .arrow-btn:hover { background: var(--teal); color: white; }
+    .dots { display: flex; gap: 10px; flex-wrap: wrap; }
+    .dot {
+      width: 10px; height: 10px; border-radius: 50%; border: none; background: rgba(13,92,107,0.2); cursor: pointer;
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+    .dot.active { background: var(--teal); transform: scale(1.15); }
+
+    /* Timeline */
+    .timeline-top {
+      display: flex; align-items: end; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    }
+    .timeline-shell {
+      margin-top: 32px; position: relative;
+    }
+    .timeline-shell::before {
+      content: ''; position: absolute; left: 30px; right: 30px; top: 52px;
+      border-top: 2px dashed rgba(13,92,107,0.25); z-index: 0;
+    }
+    .timeline-scroll {
+      display: grid; grid-auto-flow: column; grid-auto-columns: minmax(240px, 1fr);
+      gap: 18px; overflow-x: auto; padding-bottom: 6px; scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+    .timeline-scroll::-webkit-scrollbar { display: none; }
+    .timeline-card {
+      position: relative; z-index: 1; margin-top: 18px; background: white; border-radius: 24px; padding: 28px;
+      box-shadow: var(--shadow); border: 1px solid rgba(13,92,107,0.08); min-height: 240px;
+    }
+    .timeline-number {
+      width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center;
+      background: var(--teal); color: white; font-weight: 800; margin-bottom: 18px; box-shadow: 0 8px 20px rgba(13,92,107,0.2);
+    }
+    .timeline-card h3 { margin: 0 0 10px; font-size: 1.12rem; }
+    .timeline-card p { margin: 0; color: var(--muted); line-height: 1.75; }
+
+    /* CTA banner */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--teal-3), var(--teal)); color: white;
+      border-radius: 32px; padding: 36px; display: flex; align-items: center; justify-content: space-between;
+      gap: 22px; box-shadow: var(--shadow);
+    }
+    .cta-banner h3 {
+      font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 10px;
+    }
+    .cta-banner p { margin: 0; color: rgba(255,255,255,0.78); line-height: 1.8; }
+    .cta-banner .hero-actions { flex-shrink: 0; }
+
+    /* Contact */
+    .contact-grid { grid-template-columns: 0.9fr 1.1fr; margin-top: 38px; align-items: start; }
+    .contact-card, .form-card {
+      background: white; border-radius: 28px; padding: 28px; box-shadow: var(--shadow); border: 1px solid rgba(13,92,107,0.08);
+    }
+    .contact-list {
+      display: grid; gap: 16px; margin-top: 20px;
+    }
+    .contact-item {
+      display: flex; gap: 14px; align-items: flex-start; padding: 16px; border-radius: 18px; background: rgba(13,92,107,0.05);
+    }
+    .contact-item i {
+      width: 42px; height: 42px; border-radius: 14px; display: grid; place-items: center; flex-shrink: 0;
+      background: white; color: var(--teal); box-shadow: 0 8px 20px rgba(13,92,107,0.08);
+    }
+    .contact-item strong { display: block; margin-bottom: 4px; color: var(--navy); }
+    .contact-item span, .contact-item a { color: var(--muted); line-height: 1.7; }
+    .social-inline { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+    .social-link {
+      display: inline-flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 999px;
+      background: rgba(13,92,107,0.08); color: var(--teal); font-weight: 700;
+    }
+    .form-grid {
+      display: grid; gap: 16px;
+    }
+    .field label {
+      display: block; margin-bottom: 8px; font-weight: 700; color: var(--navy);
+    }
+    .field input, .field textarea {
+      width: 100%; border: 1px solid rgba(13,92,107,0.14); border-radius: 18px; padding: 15px 16px;
+      background: #fff; transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .field textarea { min-height: 140px; resize: vertical; }
+    .field input:focus, .field textarea:focus {
+      outline: none; border-color: var(--teal); box-shadow: 0 0 0 4px rgba(13,92,107,0.09);
+    }
+    .form-note { color: var(--muted); font-size: 0.92rem; line-height: 1.7; }
+    .map-wrap {
+      margin-top: 28px; border-radius: 28px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid rgba(13,92,107,0.08);
+    }
+    .map-wrap iframe { width: 100%; height: 380px; border: 0; display: block; }
+
+    /* Footer */
+    .footer {
+      padding: 48px 0 120px; background: #091a24; color: white;
+    }
+    .footer-grid {
+      display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: center;
+    }
+    .footer p { margin: 10px 0 0; color: rgba(255,255,255,0.65); }
+    .footer-links { display: flex; gap: 18px; flex-wrap: wrap; color: rgba(255,255,255,0.82); }
+
+    /* Floating WhatsApp */
+    .floating-wa {
+      position: fixed; right: 22px; bottom: 102px; z-index: 1001;
+      width: 62px; height: 62px; border-radius: 50%; background: #25D366; color: white;
+      display: grid; place-items: center; font-size: 1.6rem; box-shadow: 0 18px 34px rgba(37,211,102,0.35);
+    }
+    .floating-wa::before {
+      content: ''; position: absolute; inset: -8px; border-radius: 50%; border: 2px solid rgba(37,211,102,0.45);
+      animation: pulseRing 2s infinite;
+    }
+
+    /* Reveal */
+    .reveal {
+      opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Responsive */
+    @media (max-width: 1080px) {
+      .hero-grid, .about-grid, .contact-grid, .condition-panel { grid-template-columns: 1fr; }
+      .hero-card { justify-self: start; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .trust-grid, .badge-row { grid-template-columns: repeat(2, 1fr); }
+      .stats-bar { grid-template-columns: repeat(2, 1fr); }
+      .cta-banner { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 860px) {
+      .nav-links {
+        position: fixed; top: 82px; left: 16px; right: 16px; background: rgba(255,255,255,0.96);
+        border-radius: 24px; padding: 18px; box-shadow: var(--shadow); flex-direction: column;
+        align-items: flex-start; transform: translateY(-18px); opacity: 0; pointer-events: none;
+        transition: all 0.25s ease;
+      }
+      .nav-links.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+      .menu-toggle { display: inline-grid; place-items: center; }
+      .desktop-only { display: none !important; }
+      .sticky-cta { width: calc(100% - 20px); }
+      .sticky-cta { flex-direction: column; align-items: stretch; }
+      .sticky-cta-actions { width: 100%; }
+      .sticky-cta-actions .btn { flex: 1; padding-inline: 14px; }
+    }
+    @media (max-width: 640px) {
+      .section { padding: 76px 0; }
+      .hero-grid { padding-top: 120px; }
+      .hero h1 { font-size: clamp(2.4rem, 12vw, 3.8rem); }
+      .services-grid, .trust-grid, .badge-row, .stats-bar { grid-template-columns: 1fr; }
+      .hero-actions, .sticky-cta-actions { flex-direction: column; }
+      .rating-badge { right: 16px; left: 16px; bottom: 18px; justify-content: center; }
+      .testimonial-card, .condition-shell, .contact-card, .form-card, .cta-banner { padding: 22px; }
+      .about-image { min-height: 420px; }
+      .floating-wa { bottom: 150px; }
+      .footer { padding-bottom: 180px; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes floatY {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes pulseRing {
+      0% { transform: scale(0.9); opacity: 0.9; }
+      70% { transform: scale(1.35); opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 16px 36px rgba(0,0,0,0.2); }
+      50% { box-shadow: 0 18px 44px rgba(212,168,71,0.25); }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="Dr. Sonam's Physiotherapy Clinic home">
+        <div class="brand-icon"><i class="fa-solid fa-staff-snake"></i></div>
+        <div class="brand-text">
+          <strong>Dr. Sonam's Physiotherapy</strong>
+          <span>Baner, Pune &middot; Let's Get You Back on Track</span>
+        </div>
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary" href="#contact">Book Appointment</a>
+      </div>
+
+      <a class="btn btn-primary desktop-only" href="#contact">Book Appointment</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow fade-up"><i class="fa-solid fa-heart-pulse"></i> Premium physiotherapy care in Baner, Pune</div>
+        <h1 class="fade-up delay-1">Pune's Most Trusted Physiotherapy Clinic</h1>
+        <div class="motto fade-up delay-2">“Let's Get You Back on Track”</div>
+        <p class="fade-up delay-2">Evidence-based treatment, patient-first care, and a calm premium experience designed to help you recover with confidence—whether you're dealing with chronic pain, post-surgical recovery, neurological rehab, sports injury, or mobility concerns.</p>
+        <div class="hero-meta fade-up delay-2">
+          <div class="meta-pill">4.9★ across 121 reviews</div>
+          <div class="meta-pill">Dr. Sonam Patel, BPTh/BPT</div>
+          <div class="meta-pill">Geriatric &middot; Occupational &middot; Osteopathic</div>
+        </div>
+        <div class="hero-actions fade-up delay-3">
+          <a class="btn btn-whatsapp" href="https://wa.me/918999566957?text=Hi%20Dr.%20Sonam%2C%20I%20found%20your%20website%20and%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+          <a class="btn btn-outline" href="tel:+918999566957"><i class="fa-solid fa-phone"></i> Call Now</a>
+        </div>
+      </div>
+
+      <aside class="hero-card reveal">
+        <div class="eyebrow"><i class="fa-solid fa-star"></i> Trusted by patients across Pune</div>
+        <h3>Your recovery, handled with precision and warmth.</h3>
+        <ul>
+          <li><i class="fa-solid fa-circle-check"></i><span>Personalised treatment plans for orthopedic, neurological, post-operative, sports, and cardio-pulmonary concerns.</span></li>
+          <li><i class="fa-solid fa-circle-check"></i><span>Modern equipment, guided exercise, manual therapy, and posture-focused recovery support.</span></li>
+          <li><i class="fa-solid fa-circle-check"></i><span>Home visit service available for patients who need care at their doorstep.</span></li>
+        </ul>
+        <a class="btn btn-primary" href="#services"><i class="fa-solid fa-arrow-down"></i> Explore Treatments</a>
+      </aside>
+    </div>
+
+    <div class="rating-badge"><i class="fa-solid fa-star"></i> 4.9 Rating &middot; 121 Reviews</div>
+  </header>
+
+  <div class="container stats-wrap reveal">
+    <div class="stats-bar" id="stats-bar">
+      <div class="stat">
+        <div class="stat-value" data-target="121" data-suffix="+">0</div>
+        <div class="stat-label">Patient Reviews</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" data-target="4.9" data-decimals="1" data-suffix="★">0</div>
+        <div class="stat-label">Google Rating</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" data-target="8" data-suffix="+">0</div>
+        <div class="stat-label">Years of Experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" data-target="500" data-suffix="+">0</div>
+        <div class="stat-label">Patients Treated</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" id="services">
+    <div class="container">
+      <div class="eyebrow reveal"><i class="fa-solid fa-hand-holding-medical"></i> Specialised physiotherapy services</div>
+      <h2 class="section-title reveal">What We Treat</h2>
+      <p class="section-subtitle reveal">From pain relief and mobility restoration to recovery after surgery, every treatment path is tailored to your body, your goals, and your pace of healing.</p>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="icon"><i class="fa-solid fa-bone"></i></div>
+          <h3>Orthopaedic Care</h3>
+          <p>Back pain, neck pain, lower back strain, post knee-replacement rehab, and movement restoration for everyday comfort.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>Neurological Rehab</h3>
+          <p>Stroke recovery, foot drop, nerve-related conditions, and structured retraining for strength, balance, and function.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="icon"><i class="fa-solid fa-person-running"></i></div>
+          <h3>Sports Injury</h3>
+          <p>ACL recovery, shoulder issues, muscle injuries, overuse pain, and performance-focused rehabilitation for active patients.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="icon"><i class="fa-solid fa-scissors"></i></div>
+          <h3>Post-Operative Rehab</h3>
+          <p>Gentle but progressive post-surgery physiotherapy to reduce stiffness, rebuild movement, and restore confidence.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="icon"><i class="fa-solid fa-lungs"></i></div>
+          <h3>Cardiac &amp; Pulmonary</h3>
+          <p>Chest physiotherapy, breathing exercises, endurance conditioning, and support for improved respiratory function.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="icon"><i class="fa-solid fa-house-medical"></i></div>
+          <h3>Home Visit Service</h3>
+          <p>Personalised treatment in the comfort of your home for seniors, post-surgical patients, and limited-mobility cases.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="condition-finder">
+    <div class="container">
+      <div class="eyebrow reveal"><i class="fa-solid fa-location-crosshairs"></i> Interactive condition finder</div>
+      <h2 class="section-title reveal">Find Your Treatment</h2>
+      <p class="section-subtitle reveal">Select the area that troubles you most to see common symptoms and how Dr. Sonam approaches recovery.</p>
+
+      <div class="condition-shell reveal">
+        <div class="condition-tabs" id="condition-tabs">
+          <button class="tab-btn active" data-tab="neck">Neck</button>
+          <button class="tab-btn" data-tab="back">Back</button>
+          <button class="tab-btn" data-tab="shoulder">Shoulder</button>
+          <button class="tab-btn" data-tab="knee">Knee</button>
+          <button class="tab-btn" data-tab="hip">Hip</button>
+          <button class="tab-btn" data-tab="foot">Foot</button>
+        </div>
+
+        <div class="condition-panels">
+          <div class="condition-panel active" data-panel="neck">
+            <div class="condition-visual">
+              <i class="fa-solid fa-user-neck"></i>
+              <h3>Neck Pain &amp; Stiffness</h3>
+              <p>Perfect for desk workers, posture-related pain, cervical strain, and neck stiffness that affects daily comfort.</p>
+            </div>
+            <div class="condition-details">
+              <div class="detail-block"><h4>Common symptoms</h4><p>Morning stiffness, pain while turning the head, tension spreading to shoulders, headaches, and pain after laptop or mobile use.</p></div>
+              <div class="detail-block"><h4>How treatment helps</h4><p>Detailed assessment, posture correction, pain-relief modalities, guided mobility work, strengthening, and preventive ergonomics for lasting relief.</p></div>
+              <div class="detail-block"><h4>Ideal for</h4><p>Desk professionals, chronic neck strain, posture-related discomfort, and patients recovering from recurring stiffness episodes.</p></div>
+            </div>
+          </div>
+
+          <div class="condition-panel" data-panel="back">
+            <div class="condition-visual">
+              <i class="fa-solid fa-person-circle-exclamation"></i>
+              <h3>Back &amp; Lower Back Pain</h3>
+              <p>Structured care for acute strain, slipped disc-related symptoms, and recurring lower back discomfort.</p>
+            </div>
+            <div class="condition-details">
+              <div class="detail-block"><h4>Common symptoms</h4><p>Pain while sitting, bending difficulty, stiffness after waking, pain radiating to the hips, or discomfort after long travel/work hours.</p></div>
+              <div class="detail-block"><h4>How treatment helps</h4><p>Movement assessment, manual care, core activation, stretching, posture retraining, and progressive strengthening to restore stability.</p></div>
+              <div class="detail-block"><h4>Ideal for</h4><p>Office workers, homemakers, postural strain, recurrent back pain, and conservative management support for lumbar issues.</p></div>
+            </div>
+          </div>
+
+          <div class="condition-panel" data-panel="shoulder">
+            <div class="condition-visual">
+              <i class="fa-solid fa-hand"></i>
+              <h3>Shoulder Pain &amp; Frozen Shoulder</h3>
+              <p>Gentle recovery plans to improve range of motion and reduce pain during reaching, dressing, and lifting.</p>
+            </div>
+            <div class="condition-details">
+              <div class="detail-block"><h4>Common symptoms</h4><p>Difficulty lifting the arm, pain while sleeping on one side, reduced reach overhead, stiffness, and pain during daily chores.</p></div>
+              <div class="detail-block"><h4>How treatment helps</h4><p>Mobility restoration, pain management, targeted exercises, gradual strengthening, and function-focused recovery for smoother shoulder movement.</p></div>
+              <div class="detail-block"><h4>Ideal for</h4><p>Frozen shoulder, stiffness after inactivity, sports-related shoulder discomfort, and post-treatment mobility improvement.</p></div>
+            </div>
+          </div>
+
+          <div class="condition-panel" data-panel="knee">
+            <div class="condition-visual">
+              <i class="fa-solid fa-person-walking"></i>
+              <h3>Knee Pain &amp; Rehab</h3>
+              <p>Mobility and strength rebuilding for arthritis, knee replacement recovery, and activity-related knee pain.</p>
+            </div>
+            <div class="condition-details">
+              <div class="detail-block"><h4>Common symptoms</h4><p>Pain while climbing stairs, swelling, stiffness after rest, weakness while walking, or fear of putting weight on the knee.</p></div>
+              <div class="detail-block"><h4>How treatment helps</h4><p>Swelling management, gait retraining, strengthening, flexibility work, and joint-friendly exercises to improve confidence and function.</p></div>
+              <div class="detail-block"><h4>Ideal for</h4><p>Arthritic knees, post-op recovery, sedentary weakness, and patients wanting safer movement with less pain.</p></div>
+            </div>
+          </div>
+
+          <div class="condition-panel" data-panel="hip">
+            <div class="condition-visual">
+              <i class="fa-solid fa-child-reaching"></i>
+              <h3>Hip Pain &amp; Mobility</h3>
+              <p>Supportive care for stiffness, age-related weakness, balance issues, and painful hip movement.</p>
+            </div>
+            <div class="condition-details">
+              <div class="detail-block"><h4>Common symptoms</h4><p>Groin or side hip pain, difficulty standing up, restricted walking, limping, pain after prolonged standing, and balance concerns.</p></div>
+              <div class="detail-block"><h4>How treatment helps</h4><p>Mobility drills, targeted strengthening, gait training, balance work, and pain-relief techniques tailored to tolerance and progress.</p></div>
+              <div class="detail-block"><h4>Ideal for</h4><p>Seniors, deconditioning, postural imbalance, and anyone wanting safer walking and stronger lower-body support.</p></div>
+            </div>
+          </div>
+
+          <div class="condition-panel" data-panel="foot">
+            <div class="condition-visual">
+              <i class="fa-solid fa-shoe-prints"></i>
+              <h3>Foot Drop &amp; Foot Pain</h3>
+              <p>Targeted rehab to improve walking, lower-limb activation, and confidence after neurological or mobility setbacks.</p>
+            </div>
+            <div class="condition-details">
+              <div class="detail-block"><h4>Common symptoms</h4><p>Difficulty lifting the foot, altered gait, calf or foot pain, tripping risk, nerve-related weakness, or instability while walking.</p></div>
+              <div class="detail-block"><h4>How treatment helps</h4><p>Neuromuscular re-education, gait assistance, strength building, balance work, and progressive movement retraining.</p></div>
+              <div class="detail-block"><h4>Ideal for</h4><p>Foot drop recovery, neurological weakness, gait correction, and patients rebuilding lower-limb control step by step.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="eyebrow reveal"><i class="fa-solid fa-user-doctor"></i> Meet your physiotherapist</div>
+      <h2 class="section-title reveal">Dr. Sonam Patel, BPTh/BPT</h2>
+      <p class="section-subtitle reveal">Geriatric Physiotherapist &middot; Occupational Physiotherapy &middot; Osteopathic Treatment</p>
+
+      <div class="about-grid">
+        <div class="about-image reveal" aria-label="Doctor portrait placeholder"></div>
+        <div class="about-content reveal">
+          <div class="pill-row">
+            <div class="info-pill">✓ 8+ Years Experience</div>
+            <div class="info-pill">✓ 121 Happy Reviews</div>
+            <div class="info-pill">✓ Modern Equipment</div>
+            <div class="info-pill">✓ Home Visits Available</div>
+          </div>
+          <p>Dr. Sonam leads one of Baner's most loved physiotherapy clinics with a style of care that blends clinical discipline with patient comfort. She is known for taking the time to assess each case carefully, explain the root issue clearly, and build recovery plans that feel practical, supportive, and effective.</p>
+          <p>From chronic pain and posture-related discomfort to post-surgical rehab, neurological conditions, sports injuries, and geriatric mobility support, her focus is always the same: meaningful recovery, stronger movement, and long-term confidence in daily life.</p>
+
+          <div class="quote-box">
+            <p>“She gave complete time &amp; attention. Even basics like posture correction—she was meticulous in every small aspect.”</p>
+            <span>— Verified Patient</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section" id="why-choose">
+    <div class="container">
+      <div class="eyebrow reveal"><i class="fa-solid fa-award"></i> Why families trust this clinic</div>
+      <h2 class="section-title reveal">Why Choose Dr. Sonam's</h2>
+      <p class="section-subtitle reveal">A premium recovery experience built around time, attention, and personalised treatment—never rushed, never generic.</p>
+
+      <div class="trust-grid">
+        <article class="trust-card reveal">
+          <div class="icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3>Personalised Plans</h3>
+          <p>Every patient receives a tailored recovery protocol based on symptoms, movement quality, age, goals, and comfort level.</p>
+        </article>
+        <article class="trust-card reveal">
+          <div class="icon"><i class="fa-solid fa-hospital"></i></div>
+          <h3>Modern Equipment</h3>
+          <p>State-of-the-art machines, exercise space, and therapy tools that support accurate, progressive rehabilitation.</p>
+        </article>
+        <article class="trust-card reveal">
+          <div class="icon"><i class="fa-solid fa-house"></i></div>
+          <h3>Home Visit Available</h3>
+          <p>For patients who cannot travel comfortably, treatment can come home with structured care and guided progress.</p>
+        </article>
+        <article class="trust-card reveal">
+          <div class="icon"><i class="fa-solid fa-clock"></i></div>
+          <h3>Punctual &amp; Thorough</h3>
+          <p>Every session gets full attention, careful monitoring, and patient education that helps recovery continue beyond the clinic.</p>
+        </article>
+      </div>
+
+      <div class="badge-row reveal">
+        <div class="mini-badge"><i class="fa-solid fa-star"></i> 4.9★ patient rating</div>
+        <div class="mini-badge"><i class="fa-solid fa-comments"></i> 121+ reviews</div>
+        <div class="mini-badge"><i class="fa-solid fa-shield-heart"></i> Trusted local care</div>
+        <div class="mini-badge"><i class="fa-solid fa-person-cane"></i> Geriatric support</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="eyebrow reveal"><i class="fa-solid fa-quote-left"></i> Patient voices</div>
+      <h2 class="section-title reveal">What Our Patients Say</h2>
+      <p class="section-subtitle reveal">Real recovery stories that reflect the clinic's patience, consistency, and results-driven care.</p>
+
+      <div class="testimonial-shell reveal" id="testimonial-shell">
+        <div class="testimonial-track" id="testimonial-track">
+          <div class="testimonial-slide">
+            <article class="testimonial-card">
+              <div>
+                <div class="stars">★★★★★</div>
+                <h3>Frozen Shoulder Recovery</h3>
+                <p>“I was suffering from frozen shoulder and wasn't even able to lift my arm without excruciating pain. But within a couple of weeks I regained almost all my range of motion. Dr. Sonam is very knowledgeable and dedicated. She encouraged me to go further every session.”</p>
+              </div>
+              <div class="testimonial-meta"><span>Verified Google Patient</span><span>Shoulder rehab</span></div>
+            </article>
+          </div>
+          <div class="testimonial-slide">
+            <article class="testimonial-card">
+              <div>
+                <div class="stars">★★★★★</div>
+                <h3>Neck Stiffness Relief</h3>
+                <p>“Dr. Sonam really helped relieve my neck stiffness within a week. I have recommended her across my whole office.”</p>
+              </div>
+              <div class="testimonial-meta"><span>Verified Google Patient</span><span>Neck pain treatment</span></div>
+            </article>
+          </div>
+          <div class="testimonial-slide">
+            <article class="testimonial-card">
+              <div>
+                <div class="stars">★★★★★</div>
+                <h3>Post-Spine Surgery Recovery</h3>
+                <p>“My mom had a foot drop and underwent a spine surgery. She wasn't able to walk at all post surgery. It was all because of the hard-work, dedication and perseverance of Dr. Sonam for 3 long months that she has been able to walk with a walker first and then a stick.”</p>
+              </div>
+              <div class="testimonial-meta"><span>Verified Google Patient</span><span>Neurological rehab</span></div>
+            </article>
+          </div>
+          <div class="testimonial-slide">
+            <article class="testimonial-card">
+              <div>
+                <div class="stars">★★★★★</div>
+                <h3>Slipped Disc &amp; Scoliosis Support</h3>
+                <p>“She was so friendly and understanding. Ensured to check comfort while explaining basics. Applied ultrasound therapy when needed. Even basics like precautions while sitting, walking, how to use a belt—she was meticulous in every small aspect.”</p>
+              </div>
+              <div class="testimonial-meta"><span>Verified Google Patient</span><span>Posture &amp; pain care</span></div>
+            </article>
+          </div>
+          <div class="testimonial-slide">
+            <article class="testimonial-card">
+              <div>
+                <div class="stars">★★★★★</div>
+                <h3>Foot &amp; Calf Pain Recovery</h3>
+                <p>“Dr. Sonam is very talented. She gave sufficient time and is punctual, sincere and dedicated. She has expertise with all instruments and also in yoga and clinical exercise. I believe I got rid of my sickness due to her effort only.”</p>
+              </div>
+              <div class="testimonial-meta"><span>Verified Google Patient</span><span>Neuro physiotherapy</span></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="testimonial-controls">
+          <div class="arrow-group">
+            <button class="arrow-btn" id="prev-testimonial" aria-label="Previous testimonial"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="arrow-btn" id="next-testimonial" aria-label="Next testimonial"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+          <div class="dots" id="testimonial-dots"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="journey">
+    <div class="container">
+      <div class="timeline-top reveal">
+        <div>
+          <div class="eyebrow"><i class="fa-solid fa-route"></i> Your recovery journey</div>
+          <h2 class="section-title">A Clear Path to Feeling Better</h2>
+          <p class="section-subtitle">Every patient journey is tracked with care—from your first assessment to stronger movement and long-term confidence.</p>
+        </div>
+        <div class="arrow-group">
+          <button class="arrow-btn" id="timeline-prev" aria-label="Scroll timeline left"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="arrow-btn" id="timeline-next" aria-label="Scroll timeline right"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <div class="timeline-shell reveal">
+        <div class="timeline-scroll" id="timeline-scroll">
+          <article class="timeline-card">
+            <div class="timeline-number">1</div>
+            <h3>Initial Assessment</h3>
+            <p>Detailed consultation, history-taking, movement evaluation, and identification of the root issue affecting pain or mobility.</p>
+          </article>
+          <article class="timeline-card">
+            <div class="timeline-number">2</div>
+            <h3>Personalised Plan</h3>
+            <p>A custom protocol is designed around your condition, tolerance, goals, and the speed at which your body can safely progress.</p>
+          </article>
+          <article class="timeline-card">
+            <div class="timeline-number">3</div>
+            <h3>Active Treatment</h3>
+            <p>Sessions include guided exercise, pain-relief techniques, posture support, equipment-based care, and active recovery coaching.</p>
+          </article>
+          <article class="timeline-card">
+            <div class="timeline-number">4</div>
+            <h3>Progress Tracking</h3>
+            <p>Regular follow-up on symptoms, movement, confidence, and daily function so the treatment adapts as you heal.</p>
+          </article>
+          <article class="timeline-card">
+            <div class="timeline-number">5</div>
+            <h3>Full Recovery</h3>
+            <p>Return to your daily life, sports, or hobbies pain-free, equipped with the knowledge to maintain your health.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <div>
+          <h3>Ready to Start Your Recovery?</h3>
+          <p>Join 500+ patients who've found relief at Dr. Sonam's Clinic.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-whatsapp" href="https://wa.me/918999566957?text=Hi%20Dr.%20Sonam%2C%20I%20found%20your%20website%20and%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+          <a class="btn btn-outline dark" href="tel:+918999566957"><i class="fa-solid fa-phone"></i> Call Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="eyebrow reveal"><i class="fa-solid fa-address-book"></i> Get in touch</div>
+      <h2 class="section-title reveal">Contact &amp; Location</h2>
+      <p class="section-subtitle reveal">Book your appointment today and take the first step toward a pain-free life.</p>
+      
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <h3>Clinic Details</h3>
+          <div class="contact-list">
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Address</strong>
+                <span>2nd Floor, Ek Onkar Paradise, Survey No. 33/2P/1, Pan Card Club Road, Above Axis Bank, Near Murkute Garden, Baner, Pune – 411045</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong>Timings</strong>
+                <span>Mon–Sun: 11:00 AM – 5:00 PM</span>
+              </div>
+            </div>
+            <a href="tel:+918999566957" class="contact-item" style="text-decoration: none;">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong>Phone</strong>
+                <span>+91 89995 66957</span>
+              </div>
+            </a>
+            <a href="https://wa.me/918999566957?text=Hi%20Dr.%20Sonam%2C%20I%20found%20your%20website%20and%20want%20to%20book%20an%20appointment." target="_blank" class="contact-item" style="text-decoration: none;">
+              <i class="fa-brands fa-whatsapp"></i>
+              <div>
+                <strong>WhatsApp</strong>
+                <span>+91 89995 66957</span>
+              </div>
+            </a>
+          </div>
+          <div class="map-wrap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2613173278896!2d73.7746955!3d18.5580056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMzJzI4LjgiTiA3M8KwNDYnMjguOSJF!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <div class="form-card reveal">
+          <h3>Send an Enquiry</h3>
+          <p class="form-note" style="margin-bottom: 24px;">Fill out this form and we'll reply to you on WhatsApp.</p>
+          <div class="form-grid">
+            <div class="field">
+              <label for="enquiry-name">Your Name</label>
+              <input type="text" id="enquiry-name" placeholder="John Doe">
+            </div>
+            <div class="field">
+              <label for="enquiry-phone">Phone Number</label>
+              <input type="tel" id="enquiry-phone" placeholder="+91 XXXXX XXXXX">
+            </div>
+            <div class="field">
+              <label for="enquiry-concern">Primary Concern</label>
+              <textarea id="enquiry-concern" placeholder="Briefly describe your pain or condition..."></textarea>
+            </div>
+            <button class="btn btn-whatsapp" onclick="submitToWhatsApp()" style="width: 100%; margin-top: 8px;">
+              <i class="fa-brands fa-whatsapp"></i> Send via WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 style="margin: 0; font-family: 'Playfair Display', serif; font-size: 1.5rem;">Dr. Sonam's Physiotherapy</h3>
+          <p>Let's Get You Back on Track</p>
+        </div>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 48px; font-size: 0.9rem; opacity: 0.7;">&copy; 2025 Dr. Sonam's Physiotherapy Clinic &middot; Baner, Pune</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/918999566957?text=Hi%20Dr.%20Sonam%2C%20I%20found%20your%20website%20and%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener" class="floating-wa" aria-label="WhatsApp Us">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script>
+    // 1. Navbar glass effect & Mobile Menu
+    const navbar = document.getElementById('navbar');
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      const icon = menuToggle.querySelector('i');
+      if(navLinks.classList.contains('open')){
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+      } else {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+      }
+    });
+
+    // Close mobile menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.querySelector('i').classList.remove('fa-xmark');
+        menuToggle.querySelector('i').classList.add('fa-bars');
+      });
+    });
+
+    // 2. Animated stat counters
+    const statsBar = document.getElementById('stats-bar');
+    const statValues = document.querySelectorAll('.stat-value');
+    let hasAnimatedStats = false;
+
+    function animateCounters() {
+      statValues.forEach(el => {
+        const target = parseFloat(el.getAttribute('data-target'));
+        const decimals = parseInt(el.getAttribute('data-decimals')) || 0;
+        const suffix = el.getAttribute('data-suffix') || '';
+        const duration = 2000;
+        const startTime = performance.now();
+
+        function update(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          
+          // Easing function: easeOutQuart
+          const easeProgress = 1 - Math.pow(1 - progress, 4);
+          const current = target * easeProgress;
+
+          el.textContent = current.toFixed(decimals) + suffix;
+
+          if (progress < 1) {
+            requestAnimationFrame(update);
+          } else {
+            el.textContent = target.toFixed(decimals) + suffix;
+          }
+        }
+        requestAnimationFrame(update);
+      });
+    }
+
+    // 3. Reveal elements & Stats Trigger on Scroll
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          
+          // Trigger stats if stats-bar is visible
+          if (entry.target.id === 'stats-bar' && !hasAnimatedStats) {
+            animateCounters();
+            hasAnimatedStats = true;
+          }
+          
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+    revealElements.forEach(el => observer.observe(el));
+    if (statsBar) observer.observe(statsBar);
+
+    // 4. Condition Finder Tabs
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const panels = document.querySelectorAll('.condition-panel');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+        
+        btn.classList.add('active');
+        const target = btn.getAttribute('data-tab');
+        document.querySelector(`.condition-panel[data-panel="${target}"]`).classList.add('active');
+      });
+    });
+
+    // 5. Testimonial auto-carousel
+    const track = document.getElementById('testimonial-track');
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const prevBtn = document.getElementById('prev-testimonial');
+    const nextBtn = document.getElementById('next-testimonial');
+    const dotsContainer = document.getElementById('testimonial-dots');
+    
+    let currentIndex = 0;
+    let autoSlideInterval;
+
+    // Create dots
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = `dot ${i === 0 ? 'active' : ''}`;
+      dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    });
+    const dots = document.querySelectorAll('.dot');
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel();
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      updateCarousel();
+      resetInterval();
+    }
+
+    function startInterval() {
+      autoSlideInterval = setInterval(nextSlide, 4000);
+    }
+
+    function resetInterval() {
+      clearInterval(autoSlideInterval);
+      startInterval();
+    }
+
+    nextBtn.addEventListener('click', () => { nextSlide(); resetInterval(); });
+    prevBtn.addEventListener('click', () => { prevSlide(); resetInterval(); });
+    
+    // Pause on hover
+    document.getElementById('testimonial-shell').addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+    document.getElementById('testimonial-shell').addEventListener('mouseleave', startInterval);
+    
+    startInterval();
+
+    // 6. Timeline horizontal scroll arrows
+    const timelineScroll = document.getElementById('timeline-scroll');
+    const tlPrev = document.getElementById('timeline-prev');
+    const tlNext = document.getElementById('timeline-next');
+
+    tlNext.addEventListener('click', () => {
+      timelineScroll.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+    tlPrev.addEventListener('click', () => {
+      timelineScroll.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+
+    // 7. WhatsApp form submit
+    window.submitToWhatsApp = function() {
+      const name = document.getElementById('enquiry-name').value.trim();
+      const phone = document.getElementById('enquiry-phone').value.trim();
+      const concern = document.getElementById('enquiry-concern').value.trim();
+      
+      if (!name || !phone || !concern) {
+        alert('Please fill in all fields before submitting.');
+        return;
+      }
+      
+      const message = `Hi Dr. Sonam, I found your website and would like to book an appointment.\n\nName: ${name}\nPhone: ${phone}\nConcern: ${concern}`;
+      const encoded = encodeURIComponent(message);
+      window.open(`https://wa.me/918999566957?text=${encoded}`, '_blank');
+    }
+  </script>
+</body>
+</html>
