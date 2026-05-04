@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Dr. Sonam Patel | Dr. Sonam's Physiotherapy Clinic, Baner, Pune</title>
+  <meta name="description" content="Meet Dr. Sonam Patel, BPTh/BPT — a trusted Geriatric Physiotherapist in Baner, Pune with 8+ years of expertise in orthopedic, neurological, sports, and post-operative rehabilitation." />
+  <meta name="theme-color" content="#0d5c6b" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root{
+      --teal:#0d5c6b;
+      --teal-dark:#0a4550;
+      --teal-soft:#176f80;
+      --cream:#f9f7f4;
+      --gold:#d4a847;
+      --navy:#0d2433;
+      --text:#18313a;
+      --muted:#637780;
+      --white:#ffffff;
+      --border:rgba(13,92,107,0.12);
+      --shadow:0 15px 40px rgba(13,36,51,0.12);
+      --shadow-lg:0 24px 60px rgba(13,36,51,0.18);
+      --radius:22px;
+      --transition:all .35s ease;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'Inter',sans-serif;
+      color:var(--text);
+      background:var(--cream);
+      line-height:1.65;
+      overflow-x:hidden;
+    }
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    section{position:relative}
+    .container{
+      width:min(1200px, calc(100% - 2rem));
+      margin-inline:auto;
+    }
+    .section-padding{padding:96px 0}
+    h1,h2,h3,h4{
+      margin:0 0 14px;
+      font-family:'Playfair Display',serif;
+      line-height:1.12;
+      color:#12313a;
+    }
+    h1{font-size:clamp(2.4rem, 5vw, 4rem);color:#fff;}
+    h2{font-size:clamp(2rem, 4.2vw, 3.3rem)}
+    h3{font-size:1.4rem}
+    p{margin:0 0 1rem}
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+      padding:.45rem .9rem;
+      border-radius:999px;
+      background:rgba(212,168,71,.14);
+      color:#8e6a14;
+      font-weight:700;
+      font-size:.85rem;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      margin-bottom:16px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.7rem;
+      border:none;
+      border-radius:999px;
+      padding:14px 24px;
+      font-weight:700;
+      transition:var(--transition);
+      cursor:pointer;
+      box-shadow:0 12px 24px rgba(0,0,0,.08);
+      white-space:nowrap;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:linear-gradient(135deg,var(--teal),var(--teal-soft));color:#fff;}
+    .btn-whatsapp{background:#25D366;color:#fff;}
+    .btn-outline{
+      background:rgba(255,255,255,.12);
+      color:#fff;
+      border:1.5px solid rgba(255,255,255,.55);
+      backdrop-filter:blur(10px);
+    }
+
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease, transform .8s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+
+    .site-header{position:fixed;inset:0 0 auto 0;z-index:1000;transition:var(--transition);background:transparent;}
+    .site-header.scrolled{
+      background:rgba(249,247,244,.78);
+      backdrop-filter:blur(16px);
+      box-shadow:0 10px 30px rgba(13,36,51,.08);
+    }
+    .nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:84px;}
+    .brand{display:flex;align-items:center;gap:.85rem;}
+    .brand-icon{
+      width:48px;height:48px;border-radius:16px;
+      background:linear-gradient(135deg,var(--teal),#1b7d90);
+      color:#fff;display:grid;place-items:center;font-size:1.15rem;
+      box-shadow:0 12px 30px rgba(13,92,107,.25);
+    }
+    .brand-title{font-weight:800;font-size:1rem;line-height:1.1;}
+    .brand-sub{font-size:.78rem;color:var(--muted);}
+    .nav-links{display:flex;align-items:center;gap:1.4rem;}
+    .nav-links a{font-weight:600;color:#23444d;position:relative;}
+    .nav-links a.active,
+    .nav-links a:hover{color:var(--teal);}
+    .nav-links a::after{
+      content:"";position:absolute;left:0;bottom:-6px;
+      width:0;height:2px;background:var(--gold);transition:var(--transition);
+    }
+    .nav-links a:hover::after,
+    .nav-links a.active::after{width:100%}
+    .menu-toggle{
+      display:none;width:48px;height:48px;border:none;border-radius:14px;
+      background:rgba(13,92,107,.08);color:var(--teal);font-size:1.2rem;cursor:pointer;
+    }
+    .mobile-panel{
+      position:fixed;top:84px;right:1rem;left:1rem;
+      background:rgba(255,255,255,.92);backdrop-filter:blur(18px);
+      border:1px solid rgba(13,92,107,.08);border-radius:24px;
+      box-shadow:var(--shadow-lg);padding:1rem;display:none;
+      flex-direction:column;gap:.65rem;z-index:999;
+    }
+    .mobile-panel.open{display:flex}
+    .mobile-panel a{padding:14px 12px;border-radius:12px;font-weight:700;color:#23444d;}
+
+    .page-hero{
+      min-height:60vh;
+      display:flex;align-items:center;
+      padding-top:120px;padding-bottom:80px;
+      background:
+        linear-gradient(120deg, rgba(7,33,42,.82), rgba(13,92,107,.6)),
+        url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920') center/cover no-repeat;
+      color:#fff;
+    }
+    .page-hero .eyebrow{background:rgba(212,168,71,.2);color:var(--gold);}
+    .breadcrumb{
+      display:flex;align-items:center;gap:.6rem;
+      color:rgba(255,255,255,.78);font-weight:600;font-size:.9rem;
+      margin-bottom:14px;
+    }
+    .breadcrumb a{color:rgba(255,255,255,.78);}
+    .breadcrumb a:hover{color:var(--gold);}
+    .page-hero p{color:rgba(255,255,255,.88);font-size:1.1rem;max-width:680px;}
+
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:center;}
+    .doctor-photo{
+      position:relative;border-radius:30px;overflow:hidden;
+      box-shadow:var(--shadow-lg);min-height:560px;
+      background:
+        linear-gradient(180deg, rgba(13,92,107,.15), rgba(13,36,51,.2)),
+        url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800') center/cover no-repeat;
+    }
+    .doctor-photo::after{
+      content:"Compassionate, expert-led care";
+      position:absolute;left:24px;right:24px;bottom:24px;
+      background:rgba(255,255,255,.86);backdrop-filter:blur(10px);
+      color:var(--text);font-weight:800;padding:16px 18px;
+      border-radius:18px;box-shadow:0 10px 30px rgba(13,36,51,.12);
+    }
+    .pills{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0;}
+    .pill{
+      display:inline-flex;align-items:center;gap:.55rem;
+      padding:12px 16px;border-radius:999px;
+      background:#fff;color:var(--teal);font-weight:700;
+      border:1px solid rgba(13,92,107,.1);box-shadow:0 8px 20px rgba(13,36,51,.06);
+    }
+    .quote-card{
+      margin-top:28px;padding:24px;border-radius:24px;
+      background:linear-gradient(135deg, rgba(212,168,71,.12), rgba(13,92,107,.06));
+      border-left:5px solid var(--gold);box-shadow:var(--shadow);
+    }
+    .quote-card p{font-size:1.05rem;color:#294850;font-style:italic;margin-bottom:10px;}
+    .quote-card span{color:#7b6a35;font-weight:700;font-size:.95rem;}
+
+    .credentials{
+      background:linear-gradient(180deg, #0d2433, #112b3b);
+      color:#fff;
+    }
+    .credentials .eyebrow{background:rgba(212,168,71,.18);color:var(--gold);}
+    .credentials h2{color:#fff;}
+    .cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:32px;}
+    .cred-card{
+      background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);
+      border-radius:24px;padding:28px;backdrop-filter:blur(10px);transition:var(--transition);
+    }
+    .cred-card:hover{transform:translateY(-8px);background:rgba(255,255,255,.1);}
+    .cred-icon{
+      width:60px;height:60px;border-radius:18px;display:grid;place-items:center;
+      background:rgba(212,168,71,.14);color:var(--gold);
+      font-size:1.4rem;margin-bottom:16px;
+    }
+    .cred-card h3{color:#fff;}
+    .cred-card p{color:rgba(255,255,255,.78);margin-bottom:0;}
+
+    .philosophy{background:#fff;}
+    .philosophy-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;}
+    .philosophy-list{display:grid;gap:18px;margin-top:24px;}
+    .philosophy-item{
+      display:flex;gap:16px;align-items:flex-start;
+      background:var(--cream);border-radius:20px;padding:20px;
+      border:1px solid var(--border);
+    }
+    .philosophy-icon{
+      width:50px;height:50px;border-radius:14px;display:grid;place-items:center;
+      background:rgba(13,92,107,.08);color:var(--teal);font-size:1.2rem;flex-shrink:0;
+    }
+    .philosophy-item h4{font-size:1.05rem;margin-bottom:6px;}
+    .philosophy-item p{margin-bottom:0;color:var(--muted);font-size:.95rem;}
+    .philosophy-img{
+      border-radius:30px;overflow:hidden;box-shadow:var(--shadow-lg);min-height:480px;
+      background:
+        linear-gradient(180deg, rgba(13,92,107,.1), rgba(13,36,51,.18)),
+        url('https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=800') center/cover no-repeat;
+    }
+
+    .stats-bar{background:linear-gradient(135deg,var(--teal-dark),var(--teal));color:#fff;}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.1);}
+    .stat-item{padding:34px 24px;text-align:center;}
+    .stat-number{font-size:clamp(2rem,4vw,3.3rem);font-weight:800;line-height:1;margin-bottom:8px;}
+    .stat-label{color:rgba(255,255,255,.82);font-weight:500;font-size:.98rem;}
+
+    .cta-banner{background:linear-gradient(135deg,var(--teal-dark),var(--teal));color:#fff;overflow:hidden;}
+    .cta-banner::before,.cta-banner::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.08);}
+    .cta-banner::before{width:220px;height:220px;left:-70px;top:-70px;}
+    .cta-banner::after{width:260px;height:260px;right:-90px;bottom:-110px;}
+    .cta-wrap{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;}
+    .cta-wrap h2,.cta-wrap p{color:#fff;}
+    .cta-wrap p{color:rgba(255,255,255,.84);max-width:700px;}
+    .cta-actions{display:flex;gap:12px;flex-wrap:wrap;}
+
+    footer{background:#0b1e29;color:#fff;padding:34px 0;}
+    .footer-wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;}
+    .footer-brand strong{font-size:1.05rem;}
+    .footer-brand span{color:rgba(255,255,255,.7);}
+    .footer-links{display:flex;gap:18px;flex-wrap:wrap;}
+    .footer-links a{color:rgba(255,255,255,.85);font-weight:600;}
+    .footer-copy{color:rgba(255,255,255,.65);font-size:.94rem;}
+
+    .floating-wa{
+      position:fixed;right:20px;bottom:20px;width:62px;height:62px;border-radius:50%;
+      display:grid;place-items:center;background:#25D366;color:#fff;font-size:1.6rem;
+      box-shadow:0 18px 40px rgba(37,211,102,.32);z-index:1001;animation:pulse 2.2s infinite;
+    }
+    @keyframes pulse{
+      0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}
+      70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}
+      100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+    }
+
+    @media (max-width:1100px){
+      .about-grid,.philosophy-grid{grid-template-columns:1fr;}
+      .cred-grid{grid-template-columns:repeat(2,1fr);}
+    }
+    @media (max-width:860px){
+      .nav-links,.nav-actions .btn{display:none;}
+      .menu-toggle{display:grid;place-items:center}
+      .stats-grid{grid-template-columns:repeat(2,1fr);}
+    }
+    @media (max-width:640px){
+      .section-padding{padding:76px 0}
+      .cred-grid,.stats-grid{grid-template-columns:1fr;}
+      .doctor-photo,.philosophy-img{min-height:400px;}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <div class="brand-icon"><i class="fa-solid fa-staff-snake"></i></div>
+        <div>
+          <div class="brand-title">Dr. Sonam's Physiotherapy</div>
+          <div class="brand-sub">Baner, Pune · Let's Get You Back on Track</div>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-primary">Book Appointment</a>
+        <button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+    <div class="mobile-panel" id="mobilePanel">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn btn-primary">Book Appointment</a>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right" style="font-size:.7rem;"></i>
+        <span>About</span>
+      </div>
+      <div class="eyebrow">Meet Your Physiotherapist</div>
+      <h1>Dr. Sonam Patel — Care That Listens, Heals, &amp; Empowers</h1>
+      <p>A trusted physiotherapist in Baner, Pune known for her dedication, detailed assessments, and personalised recovery plans that bring real results to real lives.</p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container about-grid">
+      <div class="doctor-photo reveal"></div>
+      <div class="reveal">
+        <div class="eyebrow">Founder &amp; Lead Physiotherapist</div>
+        <h2>Dr. Sonam Patel, BPTh/BPT</h2>
+        <p style="font-weight:700;color:var(--teal);margin-bottom:12px;">
+          Geriatric Physiotherapist · Occupational Physiotherapy · Osteopathic Treatment
+        </p>
+        <p>
+          Dr. Sonam leads one of Baner's most loved physiotherapy clinics. With 8+ years of clinical experience and 121+ five-star reviews, she has built her reputation on patient-first care, scientific rigor, and real measurable results.
+        </p>
+        <p>
+          Her approach combines clinical precision with genuine empathy — every patient is heard, every plan is personal, and every session moves you closer to confident, pain-free movement.
+        </p>
+        <div class="pills">
+          <span class="pill"><i class="fa-solid fa-check"></i> 8+ Years Experience</span>
+          <span class="pill"><i class="fa-solid fa-check"></i> 121 Happy Patients</span>
+          <span class="pill"><i class="fa-solid fa-check"></i> Modern Equipment</span>
+          <span class="pill"><i class="fa-solid fa-check"></i> Home Visits Available</span>
+        </div>
+        <div class="quote-card">
+          <p>“She gave complete time &amp; attention. Even basics like posture correction — she was meticulous in every small aspect.”</p>
+          <span>— Verified Patient</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="credentials section-padding">
+    <div class="container">
+      <div style="text-align:center;max-width:760px;margin:0 auto 12px;" class="reveal">
+        <div class="eyebrow">Qualifications &amp; Expertise</div>
+        <h2>Credentials You Can Trust</h2>
+        <p style="color:rgba(255,255,255,.78);">A foundation of formal education, specialised training, and continuous learning — applied to every patient with care.</p>
+      </div>
+      <div class="cred-grid">
+        <article class="cred-card reveal">
+          <div class="cred-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3>BPTh/BPT</h3>
+          <p>Bachelor of Physiotherapy — formal training in musculoskeletal, neurological, cardiopulmonary, and orthopedic physiotherapy.</p>
+        </article>
+        <article class="cred-card reveal">
+          <div class="cred-icon"><i class="fa-solid fa-user-doctor"></i></div>
+          <h3>Geriatric Physiotherapy</h3>
+          <p>Specialised expertise in age-related mobility, balance, post-surgical recovery, and fall-prevention rehabilitation for older adults.</p>
+        </article>
+        <article class="cred-card reveal">
+          <div class="cred-icon"><i class="fa-solid fa-briefcase-medical"></i></div>
+          <h3>Occupational Physiotherapy</h3>
+          <p>Functional rehab focused on returning patients to daily life, work, and meaningful activities with confidence and capability.</p>
+        </article>
+        <article class="cred-card reveal">
+          <div class="cred-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+          <h3>Osteopathic Treatment</h3>
+          <p>Hands-on therapy techniques to restore movement, relieve tension, and support the body's natural healing processes.</p>
+        </article>
+        <article class="cred-card reveal">
+          <div class="cred-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <h3>Modern Therapy Equipment</h3>
+          <p>Trained in ultrasound therapy, electrotherapy, and contemporary rehab techniques used in premium clinics worldwide.</p>
+        </article>
+        <article class="cred-card reveal">
+          <div class="cred-icon"><i class="fa-solid fa-star"></i></div>
+          <h3>4.9★ Patient Rating</h3>
+          <p>121+ verified Google reviews from real patients across orthopedic, neurological, sports, and post-operative rehabilitation cases.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="philosophy section-padding">
+    <div class="container philosophy-grid">
+      <div class="reveal">
+        <div class="eyebrow">Our Philosophy</div>
+        <h2>Care That's Personal, Patient, &amp; Precise</h2>
+        <p style="color:var(--muted);">Every recovery story begins with truly understanding the person behind the symptoms. That's why Dr. Sonam designs every therapy plan around your body, your pace, and your life.</p>
+        <div class="philosophy-list">
+          <div class="philosophy-item">
+            <div class="philosophy-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div>
+              <h4>Detailed Assessment First</h4>
+              <p>No two patients are alike. Every plan starts with thorough movement, posture, and pain evaluation.</p>
+            </div>
+          </div>
+          <div class="philosophy-item">
+            <div class="philosophy-icon"><i class="fa-solid fa-route"></i></div>
+            <div>
+              <h4>Tailored Recovery Pathways</h4>
+              <p>Therapy plans are designed around your goals, lifestyle, and the realities of your daily routine.</p>
+            </div>
+          </div>
+          <div class="philosophy-item">
+            <div class="philosophy-icon"><i class="fa-solid fa-people-arrows"></i></div>
+            <div>
+              <h4>Patient Education &amp; Empowerment</h4>
+              <p>You'll understand your condition, your therapy, and how to protect your progress beyond the clinic.</p>
+            </div>
+          </div>
+          <div class="philosophy-item">
+            <div class="philosophy-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <div>
+              <h4>Measurable, Honest Progress</h4>
+              <p>Regular re-assessments and clear adjustments — no fluff, just transparent recovery you can feel.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="philosophy-img reveal"></div>
+    </div>
+  </section>
+
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid reveal">
+        <div class="stat-item">
+          <div class="stat-number">121+</div>
+          <div class="stat-label">Patient Reviews</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">4.9★</div>
+          <div class="stat-label">Google Rating</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">8+</div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Patients Treated</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner section-padding">
+    <div class="container cta-wrap reveal">
+      <div>
+        <h2>Begin Your Recovery With Dr. Sonam</h2>
+        <p>Book a consultation, ask about treatment options, or schedule a home visit — your healing starts with one conversation.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-whatsapp" href="https://wa.me/918999566957?text=Hi%20Dr.%20Sonam%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a class="btn btn-outline" href="tel:+918999566957">
+          <i class="fa-solid fa-phone"></i> Call Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-wrap">
+      <div class="footer-brand">
+        <strong>Dr. Sonam's Physiotherapy Clinic</strong><br>
+        <span>Let's Get You Back on Track · Baner, Pune</span>
+      </div>
+      <nav class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-copy">© 2025 Dr. Sonam's Physiotherapy Clinic · Baner, Pune</div>
+    </div>
+  </footer>
+
+  <a class="floating-wa" href="https://wa.me/918999566957?text=Hi%20Dr.%20Sonam%2C%20I%20found%20your%20website%20and%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script>
+    const header=document.getElementById('siteHeader');
+    const menuToggle=document.getElementById('menuToggle');
+    const mobilePanel=document.getElementById('mobilePanel');
+    window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>50));
+    menuToggle.addEventListener('click',()=>{
+      mobilePanel.classList.toggle('open');
+      menuToggle.querySelector('i').className=mobilePanel.classList.contains('open')?'fa-solid fa-xmark':'fa-solid fa-bars';
+    });
+    const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}}),{threshold:0.15});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  </script>
+</body>
+</html>
