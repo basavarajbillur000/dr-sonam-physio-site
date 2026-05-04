@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services & Treatments | Dr. Sonam's Physiotherapy Clinic, Baner, Pune</title>
+  <meta name="description" content="Explore comprehensive physiotherapy treatments including orthopedic care, neurological rehab, sports injuries, and post-operative recovery." />
+  <meta name="theme-color" content="#0d5c6b" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root{
+      --teal:#0d5c6b;
+      --teal-dark:#0a4550;
+      --teal-soft:#176f80;
+      --cream:#f9f7f4;
+      --gold:#d4a847;
+      --navy:#0d2433;
+      --text:#18313a;
+      --muted:#637780;
+      --white:#ffffff;
+      --border:rgba(13,92,107,0.12);
+      --shadow:0 15px 40px rgba(13,36,51,0.12);
+      --shadow-lg:0 24px 60px rgba(13,36,51,0.18);
+      --radius:22px;
+      --transition:all .35s ease;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'Inter',sans-serif;
+      color:var(--text);
+      background:var(--cream);
+      line-height:1.65;
+      overflow-x:hidden;
+    }
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    section{position:relative}
+    .container{
+      width:min(1200px, calc(100% - 2rem));
+      margin-inline:auto;
+    }
+    .section-padding{padding:96px 0}
+    h1,h2,h3,h4{
+      margin:0 0 14px;
+      font-family:'Playfair Display',serif;
+      line-height:1.12;
+      color:#12313a;
+    }
+    h1{font-size:clamp(2.4rem, 5vw, 4rem);color:#fff;}
+    h2{font-size:clamp(2rem, 4.2vw, 3.3rem)}
+    h3{font-size:1.4rem}
+    p{margin:0 0 1rem}
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+      padding:.45rem .9rem;
+      border-radius:999px;
+      background:rgba(212,168,71,.14);
+      color:#8e6a14;
+      font-weight:700;
+      font-size:.85rem;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      margin-bottom:16px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.7rem;
+      border:none;
+      border-radius:999px;
+      padding:14px 24px;
+      font-weight:700;
+      transition:var(--transition);
+      cursor:pointer;
+      box-shadow:0 12px 24px rgba(0,0,0,.08);
+      white-space:nowrap;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:linear-gradient(135deg,var(--teal),var(--teal-soft));color:#fff;}
+    .btn-whatsapp{background:#25D366;color:#fff;}
+    .btn-outline{
+      background:rgba(255,255,255,.12);
+      color:#fff;
+      border:1.5px solid rgba(255,255,255,.55);
+      backdrop-filter:blur(10px);
+    }
+
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease, transform .8s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+
+    .site-header{position:fixed;inset:0 0 auto 0;z-index:1000;transition:var(--transition);background:transparent;}
+    .site-header.scrolled{
+      background:rgba(249,247,244,.78);
+      backdrop-filter:blur(16px);
+      box-shadow:0 10px 30px rgba(13,36,51,.08);
+    }
+    .nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:84px;}
+    .brand{display:flex;align-items:center;gap:.85rem;}
+    .brand-icon{
+      width:48px;height:48px;border-radius:16px;
+      background:linear-gradient(135deg,var(--teal),#1b7d90);
+      color:#fff;display:grid;place-items:center;font-size:1.15rem;
+      box-shadow:0 12px 30px rgba(13,92,107,.25);
+    }
+    .brand-title{font-weight:800;font-size:1rem;line-height:1.1;}
+    .brand-sub{font-size:.78rem;color:var(--muted);}
+    .nav-links{display:flex;align-items:center;gap:1.4rem;}
+    .nav-links a{font-weight:600;color:#23444d;position:relative;}
+    .nav-links a.active,
+    .nav-links a:hover{color:var(--teal);}
+    .nav-links a::after{
+      content:"";position:absolute;left:0;bottom:-6px;
+      width:0;height:2px;background:var(--gold);transition:var(--transition);
+    }
+    .nav-links a:hover::after,
+    .nav-links a.active::after{width:100%}
+    .menu-toggle{
+      display:none;width:48px;height:48px;border:none;border-radius:14px;
+      background:rgba(13,92,107,.08);color:var(--teal);font-size:1.2rem;cursor:pointer;
+    }
+    .mobile-panel{
+      position:fixed;top:84px;right:1rem;left:1rem;
+      background:rgba(255,255,255,.92);backdrop-filter:blur(18px);
+      border:1px solid rgba(13,92,107,.08);border-radius:24px;
+      box-shadow:var(--shadow-lg);padding:1rem;display:none;
+      flex-direction:column;gap:.65rem;z-index:999;
+    }
+    .mobile-panel.open{display:flex}
+    .mobile-panel a{padding:14px 12px;border-radius:12px;font-weight:700;color:#23444d;}
+
+    .page-hero{
+      min-height:60vh;
+      display:flex;align-items:center;
+      padding-top:120px;padding-bottom:80px;
+      background:
+        linear-gradient(120deg, rgba(7,33,42,.82), rgba(13,92,107,.6)),
+        url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1920&auto=format&fit=crop&q=80') center/cover no-repeat;
+      color:#fff;
+    }
+    .page-hero .eyebrow{background:rgba(212,168,71,.2);color:var(--gold);}
+    .breadcrumb{
+      display:flex;align-items:center;gap:.6rem;
+      color:rgba(255,255,255,.78);font-weight:600;font-size:.9rem;
+      margin-bottom:14px;
+    }
+    .breadcrumb a{color:rgba(255,255,255,.78);}
+    .breadcrumb a:hover{color:var(--gold);}
+    .page-hero p{color:rgba(255,255,255,.88);font-size:1.1rem;max-width:680px;}
+
+    .cta-banner{background:linear-gradient(135deg,var(--teal-dark),var(--teal));color:#fff;overflow:hidden;}
+    .cta-banner::before,.cta-banner::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.08);}
+    .cta-banner::before{width:220px;height:220px;left:-70px;top:-70px;}
+    .cta-banner::after{width:260px;height:260px;right:-90px;bottom:-110px;}
+    .cta-wrap{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;}
+    .cta-wrap h2,.cta-wrap p{color:#fff;}
+    .cta-wrap p{color:rgba(255,255,255,.84);max-width:700px;}
+    .cta-actions{display:flex;gap:12px;flex-wrap:wrap;}
+
+    footer{background:#0b1e29;color:#fff;padding:34px 0;}
+    .footer-wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;}
+    .footer-brand strong{font-size:1.05rem;}
+    .footer-brand span{color:rgba(255,255,255,.7);}
+    .footer-links{display:flex;gap:18px;flex-wrap:wrap;}
+    .footer-links a{color:rgba(255,255,255,.85);font-weight:600;}
+    .footer-copy{color:rgba(255,255,255,.65);font-size:.94rem;}
+
+    .floating-wa{
+      position:fixed;right:20px;bottom:20px;width:62px;height:62px;border-radius:50%;
+      display:grid;place-items:center;background:#25D366;color:#fff;font-size:1.6rem;
+      box-shadow:0 18px 40px rgba(37,211,102,.32);z-index:1001;animation:pulse 2.2s infinite;
+    }
+    @keyframes pulse{
+      0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}
+      70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}
+      100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+    }
+
+    @media (max-width:860px){
+      .nav-links,.nav-actions .btn{display:none;}
+      .menu-toggle{display:grid;place-items:center}
+    }
+    @media (max-width:640px){
+      .section-padding{padding:76px 0}
+    }
+
+    /* Additions for Services */
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 38px;
+    }
+    .service-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 24px; padding: 28px; box-shadow: var(--shadow);
+      transition: var(--transition);
+      min-height: 240px; position: relative; overflow: hidden;
+    }
+    .service-card::before {
+      content: ''; position: absolute; inset: 0; background: linear-gradient(140deg, var(--teal-soft), var(--teal-dark));
+      opacity: 0; transition: var(--transition);
+    }
+    .service-card > * { position: relative; z-index: 1; }
+    .service-card .icon {
+      width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center;
+      background: rgba(13,92,107,0.08); color: var(--teal); font-size: 1.45rem; margin-bottom: 18px;
+      transition: var(--transition);
+    }
+    .service-card h3 { margin: 0 0 12px; font-size: 1.25rem; transition: var(--transition); }
+    .service-card p { margin: 0; color: var(--muted); line-height: 1.7; transition: var(--transition); }
+    .service-card:hover {
+      transform: translateY(-8px); box-shadow: var(--shadow-lg);
+    }
+    .service-card:hover::before { opacity: 1; }
+    .service-card:hover h3 { color: white; }
+    .service-card:hover .icon { background: rgba(255,255,255,0.16); color: #fff; }
+    .service-card:hover p { color: rgba(255,255,255,0.84); }
+
+    .condition-shell {
+      margin-top: 38px; background: #fff;
+      border-radius: 30px; padding: 28px; box-shadow: var(--shadow); border: 1px solid var(--border);
+    }
+    .condition-tabs {
+      display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;
+    }
+    .tab-btn {
+      border: none; background: rgba(13,92,107,0.08); color: var(--teal); cursor: pointer;
+      padding: 12px 18px; border-radius: 999px; font-weight: 700; transition: var(--transition);
+    }
+    .tab-btn.active { background: var(--teal); color: white; }
+    .condition-panels { position: relative; min-height: 260px; }
+    .condition-panel {
+      display: none; grid-template-columns: 0.9fr 1.1fr; gap: 24px; align-items: stretch;
+      animation: fadeUp 0.35s ease;
+    }
+    .condition-panel.active { display: grid; }
+    .condition-visual {
+      background: linear-gradient(135deg, rgba(13,92,107,0.12), rgba(212,168,71,0.12));
+      border-radius: 24px; padding: 28px; display: flex; flex-direction: column; justify-content: center;
+      min-height: 260px;
+    }
+    .condition-visual i {
+      font-size: 2.4rem; color: var(--teal); margin-bottom: 18px;
+    }
+    .condition-visual h3 {
+      margin: 0 0 10px; font-family: 'Playfair Display', serif; font-size: 2rem;
+    }
+    .condition-visual p { margin: 0; color: var(--muted); line-height: 1.75; }
+    .condition-details {
+      background: var(--cream); border-radius: 24px; padding: 28px; border: 1px solid var(--border);
+    }
+    .detail-block + .detail-block { margin-top: 18px; }
+    .detail-block h4 { margin: 0 0 8px; color: var(--navy); }
+    .detail-block p { margin: 0; color: var(--muted); line-height: 1.8; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width:1100px){
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width:860px){
+      .condition-panel { grid-template-columns: 1fr; }
+    }
+    @media (max-width:640px){
+      .services-grid { grid-template-columns: 1fr; }
+      .condition-shell { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <div class="brand-icon"><i class="fa-solid fa-staff-snake"></i></div>
+        <div>
+          <div class="brand-title">Dr. Sonam's Physiotherapy</div>
+          <div class="brand-sub">Baner, Pune · Let's Get You Back on Track</div>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-primary">Book Appointment</a>
+        <button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+    <div class="mobile-panel" id="mobilePanel">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn btn-primary">Book Appointment</a>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right" style="font-size:.7rem;"></i>
+        <span>Services</span>
+      </div>
+      <div class="eyebrow">Expert Treatments</div>
+      <h1>Specialised Physiotherapy Care</h1>
+      <p>From pain relief and mobility restoration to recovery after surgery, every treatment path is tailored to your body, your goals, and your pace of healing.</p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+      <div style="text-align:center;max-width:760px;margin:0 auto 12px;" class="reveal">
+        <div class="eyebrow">Our Specialisations</div>
+        <h2>What We Treat</h2>
+        <p style="color:var(--muted);">Evidence-based treatments designed to deliver effective recovery.</p>
+      </div>
+      
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="icon"><i class="fa-solid fa-bone"></i></div>
+          <h3>Orthopaedic Care</h3>
+          <p>Back pain, neck pain, lower back strain, post knee-replacement rehab, and movement restoration for everyday comfort.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>Neurological Rehab</h3>
+          <p>Stroke recovery, foot drop, nerve-related conditions, and structured retraining for strength, balance, and function.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="icon"><i class="fa-solid fa-person-running"></i></div>
+          <h3>Sports Injury</h3>
+          <p>ACL recovery, shoulder issues, muscle injuries, overuse pain, and performance-focused rehabilitation for active patients.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="icon"><i class="fa-solid fa-scissors"></i></div>
+          <h3>Post-Operative Rehab</h3>
+          <p>Gentle but progressive post-surgery physiotherapy to reduce stiffness, rebuild movement, and restore confidence.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="icon"><i class="fa-solid fa-lungs"></i></div>
+          <h3>Cardiac &amp; Pulmonary</h3>
+          <p>Chest physiotherapy, breathing exercises, endurance conditioning, and support for improved respiratory function.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="icon"><i class="fa-solid fa-house-medical"></i></div>
+          <h3>Home Visit Service</h3>
+          <p>Personalised treatment in the comfort of your home for seniors, post-surgical patients, and limited-mobility cases.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" style="background:#fff;">
+    <div class="container">
+      <div style="text-align:center;max-width:760px;margin:0 auto 12px;" class="reveal">
+        <div class="eyebrow">Interactive Condition Finder</div>
+        <h2>Find Your Treatment</h2>
+        <p style="color:var(--muted);">Select the area that troubles you most to see common symptoms and how Dr. Sonam approaches recovery.</p>
+      </div>
+
+      <div class="condition-shell reveal">
+        <div class="condition-tabs" id="condition-tabs">
+          <button class="tab-btn active" data-tab="neck">Neck</button>
+          <button class="tab-btn" data-tab="back">Back</button>
+          <button class="tab-btn" data-tab="shoulder">Shoulder</button>
+          <button class="tab-btn" data-tab="knee">Knee</button>
+          <button class="tab-btn" data-tab="hip">Hip</button>
+          <button class="tab-btn" data-tab="foot">Foot</button>
+        </div>
+
+        <div class="condition-panels">
+          <div class="condition-panel active" data-panel="neck">
+            <div class="condition-visual">
+              <i class="fa-solid fa-user-neck"></i>
+              <h3>Neck Pain &amp; Stiffness</h3>
+              <p>Perfect for desk workers, posture-related pain, cervical strain, and neck stiffness that affects daily comfort.</p>
+            </div>
+            <div class="condition-details">
+              <div class="detail-block"><h4>Common symptoms</h4><p>Morning stiffness, pain while turning the head, tension spreading to shoulders, headaches, and pain after laptop or mobile use.</p></div>
+              <div class="detail-block"><h4>How treatment helps</h4><p>Detailed assessment, posture correction, pain-relief modalities, guided mobility work, strengthening, and preventive ergonomics for lasting relief.</p></div>
+              <div class="detail-block"><h4>Ideal for</h4><p>Desk professionals, chronic neck strain, posture-related discomfort, and patients recovering from recurring stiffness episodes.</p></div>
+            </div>
+          </div>
+
+          <div class="condition-panel" data-panel="back">
+            <div class="condition-visual">
+              <i class="fa-solid fa-person-circle-exclamation"></i>
+              <h3>Back &amp; Lower Back Pain</h3>
+              <p>Structured care for acute strain, slipped disc-related symptoms, and recurring lower back discomfort.</p>
+            </div>
+            <div class="condition-details">
+              <div class="detail-block"><h4>Common symptoms</h4><p>Pain while sitting, bending difficulty, stiffness after waking, pain radiating to the hips, or discomfort after long travel/work hours.</p></div>
+              <div class="detail-block"><h4>How treatment helps</h4><p>Movement assessment, manual care, core activation, stretching, posture retraining, and progressive strengthening to restore stability.</p></div>
+              <div class="detail-block"><h4>Ideal for</h4><p>Office workers, homemakers, postural strain, recurrent back pain, and conservative management support for lumbar issues.</p></div>
+            </div>
+          </div>
+
+          <div class="condition-panel" data-panel="shoulder">
+            <div class="condition-visual">
+              <i class="fa-solid fa-hand"></i>
+              <h3>Shoulder Pain &amp; Frozen Shoulder</h3>
+              <p>Gentle recovery plans to improve range of motion and reduce pain during reaching, dressing, and lifting.</p>
+            </div>
+            <div class="condition-details">
+              <div class="detail-block"><h4>Common symptoms</h4><p>Difficulty lifting the arm, pain while sleeping on one side, reduced reach overhead, stiffness, and pain during daily chores.</p></div>
+              <div class="detail-block"><h4>How treatment helps</h4><p>Mobility restoration, pain management, targeted exercises, gradual strengthening, and function-focused recovery for smoother shoulder movement.</p></div>
+              <div class="detail-block"><h4>Ideal for</h4><p>Frozen shoulder, stiffness after inactivity, sports-related shoulder discomfort, and post-treatment mobility improvement.</p></div>
+            </div>
+          </div>
+
+          <div class="condition-panel" data-panel="knee">
+            <div class="condition-visual">
+              <i class="fa-solid fa-person-walking"></i>
+              <h3>Knee Pain &amp; Rehab</h3>
+              <p>Mobility and strength rebuilding for arthritis, knee replacement recovery, and activity-related knee pain.</p>
+            </div>
+            <div class="condition-details">
+              <div class="detail-block"><h4>Common symptoms</h4><p>Pain while climbing stairs, swelling, stiffness after rest, weakness while walking, or fear of putting weight on the knee.</p></div>
+              <div class="detail-block"><h4>How treatment helps</h4><p>Swelling management, gait retraining, strengthening, flexibility work, and joint-friendly exercises to improve confidence and function.</p></div>
+              <div class="detail-block"><h4>Ideal for</h4><p>Arthritic knees, post-op recovery, sedentary weakness, and patients wanting safer movement with less pain.</p></div>
+            </div>
+          </div>
+
+          <div class="condition-panel" data-panel="hip">
+            <div class="condition-visual">
+              <i class="fa-solid fa-child-reaching"></i>
+              <h3>Hip Pain &amp; Mobility</h3>
+              <p>Supportive care for stiffness, age-related weakness, balance issues, and painful hip movement.</p>
+            </div>
+            <div class="condition-details">
+              <div class="detail-block"><h4>Common symptoms</h4><p>Groin or side hip pain, difficulty standing up, restricted walking, limping, pain after prolonged standing, and balance concerns.</p></div>
+              <div class="detail-block"><h4>How treatment helps</h4><p>Mobility drills, targeted strengthening, gait training, balance work, and pain-relief techniques tailored to tolerance and progress.</p></div>
+              <div class="detail-block"><h4>Ideal for</h4><p>Seniors, deconditioning, postural imbalance, and anyone wanting safer walking and stronger lower-body support.</p></div>
+            </div>
+          </div>
+
+          <div class="condition-panel" data-panel="foot">
+            <div class="condition-visual">
+              <i class="fa-solid fa-shoe-prints"></i>
+              <h3>Foot Drop &amp; Foot Pain</h3>
+              <p>Targeted rehab to improve walking, lower-limb activation, and confidence after neurological or mobility setbacks.</p>
+            </div>
+            <div class="condition-details">
+              <div class="detail-block"><h4>Common symptoms</h4><p>Difficulty lifting the foot, altered gait, calf or foot pain, tripping risk, nerve-related weakness, or instability while walking.</p></div>
+              <div class="detail-block"><h4>How treatment helps</h4><p>Neuromuscular re-education, gait assistance, strength building, balance work, and progressive movement retraining.</p></div>
+              <div class="detail-block"><h4>Ideal for</h4><p>Foot drop recovery, neurological weakness, gait correction, and patients rebuilding lower-limb control step by step.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner section-padding">
+    <div class="container cta-wrap reveal">
+      <div>
+        <h2>Begin Your Recovery With Dr. Sonam</h2>
+        <p>Book a consultation, ask about treatment options, or schedule a home visit — your healing starts with one conversation.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-whatsapp" href="https://wa.me/918999566957?text=Hi%20Dr.%20Sonam%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a class="btn btn-outline" href="tel:+918999566957">
+          <i class="fa-solid fa-phone"></i> Call Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-wrap">
+      <div class="footer-brand">
+        <strong>Dr. Sonam's Physiotherapy Clinic</strong><br>
+        <span>Let's Get You Back on Track · Baner, Pune</span>
+      </div>
+      <nav class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-copy">© 2025 Dr. Sonam's Physiotherapy Clinic · Baner, Pune</div>
+    </div>
+  </footer>
+
+  <a class="floating-wa" href="https://wa.me/918999566957?text=Hi%20Dr.%20Sonam%2C%20I%20found%20your%20website%20and%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script>
+    const header=document.getElementById('siteHeader');
+    const menuToggle=document.getElementById('menuToggle');
+    const mobilePanel=document.getElementById('mobilePanel');
+    window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>50));
+    menuToggle.addEventListener('click',()=>{
+      mobilePanel.classList.toggle('open');
+      menuToggle.querySelector('i').className=mobilePanel.classList.contains('open')?'fa-solid fa-xmark':'fa-solid fa-bars';
+    });
+    const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}}),{threshold:0.15});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+    // Condition Finder Tabs
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const panels = document.querySelectorAll('.condition-panel');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+        
+        btn.classList.add('active');
+        const target = btn.getAttribute('data-tab');
+        document.querySelector(`.condition-panel[data-panel="${target}"]`).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
