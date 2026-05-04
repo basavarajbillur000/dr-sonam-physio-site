@@ -62,12 +62,13 @@
     .navbar {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
       transition: all 0.3s ease;
-      padding: 18px 0;
+      padding: 10px 0;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 4px 20px rgba(6, 49, 58, 0.06);
     }
     .navbar.scrolled {
-      padding: 10px 0;
-      background: rgba(255,255,255,0.68);
-      backdrop-filter: blur(16px);
+      background: rgba(255,255,255,0.98);
       box-shadow: 0 8px 30px rgba(6, 49, 58, 0.08);
     }
     .nav-inner {
@@ -582,7 +583,6 @@
         <a href="#about">About</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
-        <a class="btn btn-primary" href="#contact">Book Appointment</a>
       </div>
 
       <a class="btn btn-primary desktop-only" href="#contact">Book Appointment</a>
@@ -705,90 +705,58 @@
 
       <div class="condition-shell reveal">
         <div class="condition-tabs" id="condition-tabs">
-          <button class="tab-btn active" data-tab="neck">Neck</button>
-          <button class="tab-btn" data-tab="back">Back</button>
-          <button class="tab-btn" data-tab="shoulder">Shoulder</button>
-          <button class="tab-btn" data-tab="knee">Knee</button>
-          <button class="tab-btn" data-tab="hip">Hip</button>
-          <button class="tab-btn" data-tab="foot">Foot</button>
+          <button class="tab-btn active" data-tab="neck">Neck &amp; Spine</button>
+          <button class="tab-btn" data-tab="joints">Joints &amp; Arthritis</button>
+          <button class="tab-btn" data-tab="muscles">Muscle &amp; Sports</button>
+          <button class="tab-btn" data-tab="weight">Weight Management</button>
         </div>
 
         <div class="condition-panels">
           <div class="condition-panel active" data-panel="neck">
             <div class="condition-visual">
               <i class="fa-solid fa-user-neck"></i>
-              <h3>Neck Pain &amp; Stiffness</h3>
-              <p>Perfect for desk workers, posture-related pain, cervical strain, and neck stiffness that affects daily comfort.</p>
+              <h3>Neck &amp; Spine Pain</h3>
+              <p>Relief for cervical stiffness, back pain, herniated discs, and posture-related strain.</p>
             </div>
             <div class="condition-details">
-              <div class="detail-block"><h4>Common symptoms</h4><p>Morning stiffness, pain while turning the head, tension spreading to shoulders, headaches, and pain after laptop or mobile use.</p></div>
-              <div class="detail-block"><h4>How treatment helps</h4><p>Detailed assessment, posture correction, pain-relief modalities, guided mobility work, strengthening, and preventive ergonomics for lasting relief.</p></div>
-              <div class="detail-block"><h4>Ideal for</h4><p>Desk professionals, chronic neck strain, posture-related discomfort, and patients recovering from recurring stiffness episodes.</p></div>
+              <div class="detail-block"><h4>Common symptoms</h4><p>Morning stiffness, radiating pain, numbness, and difficulty bending or turning the head.</p></div>
+              <div class="detail-block"><h4>How our treatments help</h4><p><strong>Traction</strong> gently decompresses the spine to relieve nerve pressure, while <strong>SWD &amp; Long Wave</strong> and <strong>I.F.T. &amp; Tens</strong> effectively manage pain and reduce deep muscle spasms.</p></div>
             </div>
           </div>
 
-          <div class="condition-panel" data-panel="back">
+          <div class="condition-panel" data-panel="joints">
             <div class="condition-visual">
-              <i class="fa-solid fa-person-circle-exclamation"></i>
-              <h3>Back &amp; Lower Back Pain</h3>
-              <p>Structured care for acute strain, slipped disc-related symptoms, and recurring lower back discomfort.</p>
+              <i class="fa-solid fa-bone"></i>
+              <h3>Joints &amp; Arthritis</h3>
+              <p>Targeted care for frozen shoulder, knee pain, osteoarthritis, and stiff joints.</p>
             </div>
             <div class="condition-details">
-              <div class="detail-block"><h4>Common symptoms</h4><p>Pain while sitting, bending difficulty, stiffness after waking, pain radiating to the hips, or discomfort after long travel/work hours.</p></div>
-              <div class="detail-block"><h4>How treatment helps</h4><p>Movement assessment, manual care, core activation, stretching, posture retraining, and progressive strengthening to restore stability.</p></div>
-              <div class="detail-block"><h4>Ideal for</h4><p>Office workers, homemakers, postural strain, recurrent back pain, and conservative management support for lumbar issues.</p></div>
+              <div class="detail-block"><h4>Common symptoms</h4><p>Pain during movement, swelling, restricted range of motion, and stiffness after resting.</p></div>
+              <div class="detail-block"><h4>How our treatments help</h4><p><strong>Wax Bath</strong> provides soothing heat for stiff joints, while <strong>Ultrasonic Therapy</strong> and <strong>Laser Therapy</strong> reduce deep inflammation and accelerate tissue healing.</p></div>
             </div>
           </div>
 
-          <div class="condition-panel" data-panel="shoulder">
+          <div class="condition-panel" data-panel="muscles">
             <div class="condition-visual">
-              <i class="fa-solid fa-hand"></i>
-              <h3>Shoulder Pain &amp; Frozen Shoulder</h3>
-              <p>Gentle recovery plans to improve range of motion and reduce pain during reaching, dressing, and lifting.</p>
+              <i class="fa-solid fa-person-running"></i>
+              <h3>Muscle Strain &amp; Sports Injuries</h3>
+              <p>Rehabilitation for ligament tears, muscle weakness, sports injuries, and post-operative recovery.</p>
             </div>
             <div class="condition-details">
-              <div class="detail-block"><h4>Common symptoms</h4><p>Difficulty lifting the arm, pain while sleeping on one side, reduced reach overhead, stiffness, and pain during daily chores.</p></div>
-              <div class="detail-block"><h4>How treatment helps</h4><p>Mobility restoration, pain management, targeted exercises, gradual strengthening, and function-focused recovery for smoother shoulder movement.</p></div>
-              <div class="detail-block"><h4>Ideal for</h4><p>Frozen shoulder, stiffness after inactivity, sports-related shoulder discomfort, and post-treatment mobility improvement.</p></div>
+              <div class="detail-block"><h4>Common symptoms</h4><p>Sudden pain, weakness in limbs, muscle atrophy, and inability to bear weight or perform athletic activities.</p></div>
+              <div class="detail-block"><h4>How our treatments help</h4><p><strong>Muscle Stimulators</strong> elicit contractions to rebuild strength and prevent atrophy, while <strong>Laser Therapy</strong> accelerates cellular repair for faster return to activity.</p></div>
             </div>
           </div>
 
-          <div class="condition-panel" data-panel="knee">
+          <div class="condition-panel" data-panel="weight">
             <div class="condition-visual">
-              <i class="fa-solid fa-person-walking"></i>
-              <h3>Knee Pain &amp; Rehab</h3>
-              <p>Mobility and strength rebuilding for arthritis, knee replacement recovery, and activity-related knee pain.</p>
+              <i class="fa-solid fa-weight-scale"></i>
+              <h3>Weight Management</h3>
+              <p>Structured, clinically-guided programs designed for safe and sustainable weight loss without injury.</p>
             </div>
             <div class="condition-details">
-              <div class="detail-block"><h4>Common symptoms</h4><p>Pain while climbing stairs, swelling, stiffness after rest, weakness while walking, or fear of putting weight on the knee.</p></div>
-              <div class="detail-block"><h4>How treatment helps</h4><p>Swelling management, gait retraining, strengthening, flexibility work, and joint-friendly exercises to improve confidence and function.</p></div>
-              <div class="detail-block"><h4>Ideal for</h4><p>Arthritic knees, post-op recovery, sedentary weakness, and patients wanting safer movement with less pain.</p></div>
-            </div>
-          </div>
-
-          <div class="condition-panel" data-panel="hip">
-            <div class="condition-visual">
-              <i class="fa-solid fa-child-reaching"></i>
-              <h3>Hip Pain &amp; Mobility</h3>
-              <p>Supportive care for stiffness, age-related weakness, balance issues, and painful hip movement.</p>
-            </div>
-            <div class="condition-details">
-              <div class="detail-block"><h4>Common symptoms</h4><p>Groin or side hip pain, difficulty standing up, restricted walking, limping, pain after prolonged standing, and balance concerns.</p></div>
-              <div class="detail-block"><h4>How treatment helps</h4><p>Mobility drills, targeted strengthening, gait training, balance work, and pain-relief techniques tailored to tolerance and progress.</p></div>
-              <div class="detail-block"><h4>Ideal for</h4><p>Seniors, deconditioning, postural imbalance, and anyone wanting safer walking and stronger lower-body support.</p></div>
-            </div>
-          </div>
-
-          <div class="condition-panel" data-panel="foot">
-            <div class="condition-visual">
-              <i class="fa-solid fa-shoe-prints"></i>
-              <h3>Foot Drop &amp; Foot Pain</h3>
-              <p>Targeted rehab to improve walking, lower-limb activation, and confidence after neurological or mobility setbacks.</p>
-            </div>
-            <div class="condition-details">
-              <div class="detail-block"><h4>Common symptoms</h4><p>Difficulty lifting the foot, altered gait, calf or foot pain, tripping risk, nerve-related weakness, or instability while walking.</p></div>
-              <div class="detail-block"><h4>How treatment helps</h4><p>Neuromuscular re-education, gait assistance, strength building, balance work, and progressive movement retraining.</p></div>
-              <div class="detail-block"><h4>Ideal for</h4><p>Foot drop recovery, neurological weakness, gait correction, and patients rebuilding lower-limb control step by step.</p></div>
+              <div class="detail-block"><h4>Common challenges</h4><p>Joint pain preventing exercise, plateauing weight, or needing a structured plan after surgery or illness.</p></div>
+              <div class="detail-block"><h4>How our treatments help</h4><p>Our dedicated <strong>Weight Loss</strong> programs provide scientifically-guided exercise routines that protect your joints while effectively burning calories and improving overall fitness.</p></div>
             </div>
           </div>
         </div>
